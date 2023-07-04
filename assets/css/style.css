@@ -1,0 +1,154 @@
+body {
+    background: linear-gradient(to right, #184e8e, #60a8e4);
+    overflow: hidden;
+  }
+  
+  .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slide-up 0.5s ease;
+    position: relative;
+    z-index: 2;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .card-title {
+    color: #2c5ca9;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    animation: heartbeat 1.5s infinite;
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .form-group label {
+    color: #2c5ca9;
+    font-weight: bold;
+    animation: color-change 1.5s infinite;
+  }
+  
+  @keyframes color-change {
+    0% {
+      color: #2c5ca9;
+    }
+    50% {
+      color: #ff7f00;
+    }
+    100% {
+      color: #2c5ca9;
+    }
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    background-color: #f1f3f6;
+    border: none;
+    animation: fade-in 1s ease;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .btn-primary {
+    background-color: #184e8e;
+    border-color: #184e8e;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #103563;
+    border-color: #103563;
+  }
+  
+  .btn-primary:active,
+  .btn-primary.active {
+    background-color: #103563;
+    border-color: #103563;
+  }
+  
+  .coin-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .coin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+  }
+  
+  .coin img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.9;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateX(-20deg) rotateY(20deg);
+    }
+    100% {
+      transform: rotateX(340deg) rotateY(380deg);
+    }
+  }
+  
